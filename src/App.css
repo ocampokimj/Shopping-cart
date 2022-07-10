@@ -1,38 +1,310 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chathura:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chathura:wght@100;300&family=Cormorant:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chathura:wght@100;300&family=Cormorant:wght@300&family=Prosto+One&display=swap');* {
+  padding: none;
+  margin: none;
+}
+#root {
+  width: 95vw;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Home {
+  /* background-color: rgb(69, 41, 41); */
+  height: 100vh;
+  width: 98vw;
+  background-image: url(./images/ald-bg.png);
+  /* background-position: center; */
+  background-size: 42%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.background {
+  /* background-image: url(./images/rround-logo.jpg); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 5rem;
+  height: 130vh;
+  width: auto;
+
+
+}
+.homepage-letter {
+  font-size: 3.5vh;
+  width: 65vh;
+  margin-top: 30%;
+  font-family: 'Chathura', sans-serif;
+}
+.homepage-letter>span {
+  color: green;
+  font-weight: 700;
+  font-size: 5vh;
+}
+.App,.Cart {
+  width: 95vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  color: black;
+  padding: none;
+  align-items: start;
+  height: 6vh;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.247);
+  width: 98vw;
+  margin-top: none;
+
+}
+.title {
+  height: 10vh;
+  justify-self: center;
+  place-self: center;
+  font-family: 'Prosto One', cursive;
+}
+.icon {
+  height: 7vh;
+  margin-left: 1rem;
+  bottom: 99vh;
+  align-self: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.hamburger {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+  color: black;
+  
+}
+.top-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
   color: white;
+  font-size: 1vh;
+  place-items: center;
+  padding-bottom: 1rem;
+  width: 15vw;
+  
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+.shop-page, .home-page {
+  font-family: 'Chathura', sans-serif;
+  font-size: 4vh;
+  text-decoration: none;
+  color: black
+}
+.cart-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+.count {
+  font-size: 2.3vh;
+  text-align: end;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.shop-title, .cart-title, .home-title, .item-title   {
+  width: 100%;
+  padding-left: 1.2rem;
+  border-top: .2px solid black;
+  border-bottom: .2px solid black;
+  font-size: 5vh;
+  font-family: 'Chathura', sans-serif;
+
 }
+
+.shopping-img {
+  width: 18vw;
+  height: auto;
+}
+.shopping-img:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.shopping-items-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(auto, 1fr);
+  margin: 1rem;
+  gap: 1.5vh;
+}
+
+/* .cart-item-container {
+  display: grid;
+  grid-template-rows: repeat(auto, 1fr);
+} */
+
+.cart-review {
+  width: 65vw;
+  place-content: center;
+}
+.cart-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: none;
+  width: 95vw;
+}
+.cart-overview {
+  margin-top: 2rem;
+  height: 50vh;
+  align-self: start;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  width: 23vw;
+  justify-self: end;
+
+}
+.checkout-total {
+  border-top: .2px solid black;
+  font-size: 4vh;
+  text-align: end;
+  text-justify: end;
+  font-family: 'Chathura', sans-serif;
+  text-transform: capitalize;
+}
+
+.checkout-subtotal {
+  border-top: .2px solid black;
+  font-size: 4vh;
+  text-align: end;
+  text-justify: end;
+  font-family: 'Chathura', sans-serif;
+  text-transform: capitalize;
+}
+.checkout-shipping {
+  border-top: .2px solid black;
+  font-size: 4vh;
+  text-align: end;
+  text-justify: end;
+  font-family: 'Chathura', sans-serif;
+  text-transform: capitalize;
+}
+.checkout-msg {
+  text-align: center;
+  font-size: 4vh;
+  font-family: 'Chathura', sans-serif;
+  text-transform: capitalize;
+}
+.checkout-btn {
+  background: none;
+  border: none;
+  height: 4vh;
+  font-size: 4vh;
+  width: 12vw;
+  place-self: center;
+  font-family: 'Chathura', sans-serif;
+  color: green;
+  font-weight: 700;
+  cursor: pointer;
+}
+.cart-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-bottom: 0.2px solid black;
+  justify-self: center;
+  margin: 0 0 1rem 0;
+  place-items: center;
+}
+.cart-checkout-btn {
+  height: 5vh;
+  width: 2vw;
+  font-size: 2vh;
+  background: none;
+  border: none;
+  cursor: pointer;
+  
+}
+.cart-checkout-name {
+  font-size: 2.5vh;
+}
+.cart-checkout-price {
+  font-size: 2.5vh;
+}
+.cart-checkout-img {
+  height: 15vh;
+}
+.item-info {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  font-size: 3vh;
+  align-self: start;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  font-family: 'Chathura', sans-serif;
+}
+.item-detail {
+  list-style: none;
+  border-bottom: 0.2px solid black;
+  margin-bottom: 3px;
+}
+
+.shop-price {
+  text-align: end;
+}
+.cart-count {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  left: 94%;
+  bottom: 91.5%;
+  font-size: 2.5vh;
+}
+
+.display-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-self: center;
+  margin: 3rem;
+}
+
+.display-details {
+  place-self: center;
+}
+.display-img {
+  height: 40vh;
+  justify-self: end;
+}
+.display-img:hover {
+  transform: scale(1.8, 1.8);
+}
+.availability {
+  margin-top: 1rem;
+  text-align: end;
+}
+
+.display-details {
+  font-size: 1.5vh;
+  font-size: 1;
+}
+
+.item-price {
+  border-bottom: 0.2px solid black;
+  font-size: 2vh;
+  text-align: end;
+}
+.add-cart {
+  height: 2.5vh;
+  font-size: 1vh;
+  place-self: end;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
